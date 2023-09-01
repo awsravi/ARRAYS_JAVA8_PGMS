@@ -26,7 +26,7 @@ public class ArrayEvenOdd {
 				
 				arrList.stream().filter(n ->n%2!=0).sorted((a1,a2) ->a1-a2 ).forEach(System.out::println);
 				
-				arrList.stream().filter(n ->n%2!=0).map(null)
+				
 		
 		
 	}
