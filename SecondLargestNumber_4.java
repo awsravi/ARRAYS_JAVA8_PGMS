@@ -30,6 +30,21 @@ public class SecondLargestNumber_4 {
 
 }
 
+public class SecondLargestNumber {
+    public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(20, 14, 20, 5, 6, 7, 20);
+
+        Integer secondLargest = numbers.stream()
+                .distinct() 
+                .sorted((a, b) -> b.compareTo(a)) //sort desc
+                .skip(1) 
+                .findFirst() 
+                .orElse(null);
+
+        System.out.println("Second largest number: " + secondLargest);
+    }
+}
+
 /*
  * List<Integer> listNum = Arrays.asList(14, 46, 47, 86, 92, 52, 48, 36, 66,
  * 85); List<Integer> order =
